@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoFundacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fundacion_coppel"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sugerencias -->
+        <TextView
+            android:text="Tus sugerencias de hoy"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:text="Puedes visitar los siguientes sitios:"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:text="Tortilleria Gutierrez"
+            android:background="#66B3FF"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:text="Tortilleria La Favorita"
+            android:background="#66B3FF"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:text="Fonda La Tapatía de Santa Tere"
+            android:background="#66B3FF"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnVerUbicaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver ubicaciones"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Nuevo Registro -->
+        <TextView
+            android:text="Nuevo Registro"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnCapturaINE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Captura con INE"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnRegistroManual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro manual"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Tu Resumen -->
+        <TextView
+            android:text="Tu Resumen"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:text="Registros nuevos esta semana:" />
+        <TextView android:text="22" android:textSize="20sp" android:textColor="#1E88E5" android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Usuarios que han iniciado sesión:" />
+        <TextView android:text="14" android:textSize="20sp" android:textColor="#1E88E5" android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Usuarios que han completado 20 lecciones:" />
+        <TextView android:text="7" android:textSize="20sp" android:textColor="#1E88E5" android:layout_marginBottom="16dp"/>
+
+        <!-- Recompensa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:text="Tu próxima recompensa:"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:text="Vale de descuento del 30%"
+                android:textColor="#1E88E5"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="70"
+                android:progressTint="#1E88E5"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
