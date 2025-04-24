@@ -17,7 +17,7 @@ fun Application.configureRouting() {
             call.respondText("Hello World!")
         }
 
-        get("/usuario/{id}") {
+        get("/login/{id}") {
             val id = call.parameters["id"]?.toIntOrNull()
             if (id == null) {
                 call.respondText("ID inválido", status = HttpStatusCode.BadRequest)
@@ -30,12 +30,12 @@ fun Application.configureRouting() {
 
             try {
                 val connection = DriverManager.getConnection(url, user, password)
-                val statement = connection.prepareStatement("SELECT name FROM dummy_table WHERE id = ?")
+                val statement = connection.prepareStatement("SELECT NombreUsuario FROM registros WHERE IdUsuario = ?")
                 statement.setInt(1, id)
 
                 val resultSet = statement.executeQuery()
                 if (resultSet.next()) {
-                    val nombre = resultSet.getString("name")
+                    val nombre = resultSet.getString("NombreUsuario")
                     call.respondText("Nombre: $nombre")
                 } else {
                     call.respondText("Usuario no encontrado", status = HttpStatusCode.NotFound)
